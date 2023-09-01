@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="GetProductDetailsTestSuite" verbose="1">
+    <listeners>
+        <listener class-name="base.TestListeners"></listener>
+    </listeners>
+
+    <!-- Chrome Tests -->
+    <test name="GetProductsDetails-CH">
+        <parameter name="search" value="camisetas"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="tests.products.GetProductDetailsTest"></class>
+        </classes>
+    </test>
+    <!-- Firefox Tests -->
+    <test name="GetProductsDetails-FF">
+        <parameter name="search" value="camisetas"></parameter>
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="tests.products.GetProductDetailsTest"></class>
+        </classes>
+    </test>
+</suite>
